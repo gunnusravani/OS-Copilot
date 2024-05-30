@@ -63,7 +63,7 @@ class ToolManager:
         os.makedirs(f"{generated_tool_repo_dir}/tool_code", exist_ok=True)
         os.makedirs(f"{generated_tool_repo_dir}/tool_description", exist_ok=True)
         # Utilize the Chroma database and employ OpenAI Embeddings for vectorization (default: text-embedding-ada-002)
-        
+        embedding_function = ""
         if EMBED_MODEL_TYPE == "OpenAI":
             embedding_function = OpenAIEmbeddings(
                 openai_api_key=OPENAI_API_KEY,
